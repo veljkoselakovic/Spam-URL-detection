@@ -1,0 +1,33 @@
+#http://n8ckdic711b1rp.w3ae2-2295.speceoff.us/?c1=cvBQBAATGAAA4RE0W7vLlxQ&c41=ud7812290
+import re
+URL = 'http://n8ckdic711b1rp.w3ae2-2295.speceoff.us/?c1=cvBQBAATGAAA4RE0W7vLlxQ&c41=ud7812290'
+
+out = []
+
+out.append(len(URL))
+splitURL = re.split('https:|http:', URL)
+hostname = splitURL[1][2:]
+
+hostname = re.split('www\.', hostname)
+if len(hostname) == 1:
+    hostname = hostname[0]
+else:
+    hostname = hostname[1]
+
+hostname = re.split('/', hostname)[0]
+
+hostname = re.split('\.', hostname)
+hostname = hostname[:-1]
+hostname = '.'.join(hostname)
+
+
+
+out.append(len(hostname))
+out.append(0)
+arr = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.9,0,0,0,0]
+out = out + arr
+print(len(out))
+
+
+
+
